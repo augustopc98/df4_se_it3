@@ -34,5 +34,9 @@ public class CustomerServiceImpl implements CustomerService {
             c.setCustomerEmail(newEmail);
             customerRepository.save(c);
         });
+
+    }
+    public Customer createCustomer(Customer customer) {
+        return customerRepository.save(customer);
     }
 }
